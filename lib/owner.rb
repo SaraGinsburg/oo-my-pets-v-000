@@ -31,7 +31,7 @@ class Owner
   end
 
   def say_species
-   "I am a human."
+   "I am a #{species}."
   end
 
   def name
@@ -64,9 +64,6 @@ class Owner
   end
 
   def sell_pets
-    # owner.sell_pets
-    # owner.pets.each {|type, pets| expect(pets.empty?).to eq(true) }
-    # [fido, tabby, nemo].each { |o| expect(o.mood).to eq("nervous") }
     @pets.each {|type, pets| pets.each {|p| p.mood = "nervous"}}
     @pets.each {|type, pets| pets.clear}
   end
